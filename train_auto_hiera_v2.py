@@ -81,7 +81,7 @@ def main():
     )
     parser.add_argument(
         "--snapshot_path",
-        default="/data/pyhData/3DSAM-adapter-main/3DSAM-adapter/work_dir",
+        default="/data/pyhData/SAM2/3DSAM-adapter/work_dir",
         type=str,
     )
     parser.add_argument(
@@ -122,9 +122,9 @@ def main():
         default=None,
         help="Resuming training from checkpoint"
     )
-    parser.add_argument("-bs", "--batch_size", default=4, type=int)
+    parser.add_argument("-bs", "--batch_size", default=6, type=int)
     parser.add_argument("--num_classes", default=2, type=int)
-    parser.add_argument("--lr", default=6e-5, type=float)
+    parser.add_argument("--lr", default=1.2e-4, type=float)
     parser.add_argument("--max_epoch", default=200, type=int)
     parser.add_argument("--eval_interval", default=4, type=int)
     parser.add_argument("--resume", action="store_true")
@@ -194,7 +194,7 @@ def main():
     )
     
     # 构建模型
-    sam = build_sam2("sam2_hiera_l.yaml", "/data/pyhData/3DSAM-adapter-main/3DSAM-adapter/ckpt/sam2_hiera_large.pt")
+    sam = build_sam2("sam2_hiera_l.yaml", "/data/pyhData/SAM2/ckpt/sam2_hiera_large.pt")
     
     trunk = Hiera(
         embed_dim=144,
