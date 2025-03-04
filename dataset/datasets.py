@@ -7,7 +7,7 @@ import numpy as np
 import torch.nn.functional as F
 # from .base_dataset import BaseVolumeDataset
 sys.path.append('/data/pyhData/3DSAM-adapter-main/3DSAM-adapter/dataset')
-from base_npz_dataset import NpzBaseVolumeDataset
+from dataset.base_npz_dataset import NpzBaseVolumeDataset
 
 
 
